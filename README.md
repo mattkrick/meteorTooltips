@@ -7,10 +7,13 @@ all with a nice looking material design animation.
 There are 2 parts: a `trigger` and a `tooltip`. The trigger is the thing you want the user to mouseover or click.
 The trigger can be anything. A single line of text or icon or a big ol div. Here's how it looks using a line of text as a trigger:
 
-    {{#tooltipTrigger name="myToolTip"}}Hover over me{{/tooltipTrigger}}
+    {{#tooltipTrigger name="myToolTip" pos="right"}}Hover over me{{/tooltipTrigger}}
     
-`name` is the name of the template that you want to appear as the tooltip. It can be as simple as a line of text or it could
- be a whole web page (don't do that). I like to have bullet points, each with a tip:
+`name` is the name of the template that you want to appear as the tooltip. It can be as simple as a line of text or it could be a whole web page (don't do that). 
+
+`pos` is the position: left (default), right, above, below. If it's on the left, you don't have to include the pos argument.
+
+I like to have bullet points, each with a tip:
  
      <template name="myToolTip">
        <ul>
@@ -21,7 +24,8 @@ The trigger can be anything. A single line of text or icon or a big ol div. Here
        </ul>
      </template>
      
- That's it. Have a gif.
+ That's it. Have a gif of it in the wild. 
+ ![Tooltip](http://i.imgur.com/Afc98Js.gif)
  
  
  
