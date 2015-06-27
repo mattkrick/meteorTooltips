@@ -1,0 +1,14 @@
+<template name="tooltip">
+  <div class="tooltip">
+    <div class="tooltip-background"></div>
+    <div class="tooltip-content">
+      {{>Template.dynamic template=this}}
+    </div>
+  </div>
+</template>
+
+<template name="tooltipTrigger">
+  <div class="tooltip-region">
+    {{>Template.contentBlock}}
+  </div>
+</template>

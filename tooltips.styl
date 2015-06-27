@@ -1,0 +1,73 @@
+@import "nib"
+darkBackground = #474747
+EASE_OUT = cubic-bezier(.4, 0, .2, 1)
+
+.tooltip-background
+  position absolute
+  background darkBackground
+  transform: scale(0.01)
+  border-radius 100%
+  opacity 0
+  animation expand-background 300ms forwards EASE_OUT
+@keyframes expand-background
+  85% {
+    border-radius 40%
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    border-radius 3px
+  }
+
+.tooltip
+  position absolute
+  z-index: 200
+  max-width 200px
+  overflow hidden
+  font-size .8em
+  user-select none
+  border-radius 3px
+  animation-duration 150ms
+  animation-delay 50ms
+  animation-fill-mode forwards
+  animation-timing-function EASE_OUT
+
+@keyframes move-left
+  100% {
+    transform: translateX(-8px);
+  }
+
+@keyframes move-right
+  100% {
+    transform: translateX(8px);
+  }
+
+@keyframes move-up
+  100% {
+    transform: translateY(-8px);
+  }
+
+@keyframes move-down
+  100% {
+    transform: translateY(8px);
+  }
+
+.tooltip ul
+  padding-left 16px
+  list-style: disc outside none;
+.tooltip li
+  display: list-item
+
+.tooltip-content
+  padding 8px
+  opacity 0
+  color white
+  position relative
+  transform: translateY(10px);
+  animation: open-tooltip-content 150ms 150ms forwards EASE_OUT
+
+@keyframes open-tooltip-content
+  100% {
+    transform: translateY(0);
+    opacity 1;
+  }
