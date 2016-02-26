@@ -1,3 +1,5 @@
+#*DEPRECATED*
+
 #Meteor tooltips
 
 Tooltips can be more than just a tiny box with plain text. This lets you turn any template into a tooltip & use any element as a trigger
